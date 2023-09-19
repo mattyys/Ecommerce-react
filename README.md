@@ -1,2 +1,2 @@
-# kongbeer-react
+# Eccomerce-react
 Proyecto React curso IBEC
