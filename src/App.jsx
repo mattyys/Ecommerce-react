@@ -1,14 +1,15 @@
 
 
 import './App.css'
-import { ItemCount } from './components/itemCount/ItemCount'
+import { ItemContainer } from './components/itemContainer/ItemContainer'
+
 
 function App() {
 
 
   return (
     <>
-    <ItemCount />     
+    <ItemContainer />   
     </>
   )
 }

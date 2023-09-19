@@ -1,0 +1,8 @@
+.products-container {
+    display: flex;
+    min-height: 70vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:30px;
+}

@@ -1,0 +1,32 @@
+:root {
+  /*fonts*/
+  --catamaran-font: 'Catamaran', sans-serif;
+  --mulish-font: 'Mulish', sans-serif;
+  /*colors*/
+  --primary-color: #6b49ff;
+  --secondary-color: #8bb5f5;
+  --body-bg-color: #1d1d1d;
+  --border-color: #555555;
+  --success-color: #b5f86e;
+  --error-color: #d8000c;
+  --info-color: #31708f;
+  --just-white: #ffffff;
+  --just-black: #000000;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+font-family: var(--mulish-font);
+}
+
+body {
+  background-color:var(--just-white);
+  color:var(--body-bg-color);
+}

@@ -1,10 +1,11 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import "./ItemCount.css";
-
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import './ItemCount.css';
 
 export const ItemCount = ({ stock, initial }) => {
+
   const [count, setCount] = useState(initial);
+
   const addCount = (num) => {
     setCount(count + num);
   };
@@ -23,7 +24,7 @@ export const ItemCount = ({ stock, initial }) => {
       <div className="box-quantity">{count}</div>
       <button
         className="button-count"
-        disiable={count >= stock}
+        disabled={count >= stock}
         onClick={() => {
           addCount(1);
         }}
@@ -33,6 +34,7 @@ export const ItemCount = ({ stock, initial }) => {
     </div>
   );
 };
+
 
 
 ItemCount.protoTypes = {
