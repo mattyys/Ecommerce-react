@@ -22,9 +22,8 @@ Item.protoType = {
         title: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         image: PropTypes.string.isRequired,
-        stock: PropTypes.number.isRequired,
     }),
 }
 Item.defaultProps = {
-    stock:10
+    stock:0
 }

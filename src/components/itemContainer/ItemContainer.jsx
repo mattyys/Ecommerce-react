@@ -1,7 +1,7 @@
 import "./ItemContainer.css";
 import {Item} from "../item/Item";
 import { Constantes } from "../../assets/constantes";
-import { useEfect, useState } from "react";
+import { useEffect, useState } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 
 export const ItemContainer = () => {
@@ -11,9 +11,12 @@ export const ItemContainer = () => {
   //Funcion para obtener y guardar los datos que me devuelve el API
   const getProducts = async () => {
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
+      const response = await fetch(`${Constantes.allProducts}`);
+    
       const data = response.json();
+      console.log(data);
       setProducts(data);
+
     } catch (error) {
       console.log(error);
     }
@@ -21,9 +24,9 @@ export const ItemContainer = () => {
 
   //Se utiliza useEffect par cargar datos al montar el componente
 
-  useEfect(() => {
+  useEffect(() => {
     getProducts();
-  }, []);
+  },[]);
 
   return (
     <div className="products-container">
