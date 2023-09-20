@@ -2,6 +2,7 @@ import "./ItemContainer.css";
 import {Item} from "../item/Item";
 import { Constantes } from "../../assets/constantes";
 import { useEffect, useState } from "react";
+
 import PulseLoader from "react-spinners/PulseLoader";
 
 export const ItemContainer = () => {
@@ -13,8 +14,8 @@ export const ItemContainer = () => {
     try {
       const response = await fetch(`${Constantes.allProducts}`);
     
-      const data = response.json();
-      console.log(data);
+      const data = await response.json();
+      
       setProducts(data);
 
     } catch (error) {
@@ -32,7 +33,7 @@ export const ItemContainer = () => {
     <div className="products-container">
       {products.length > 0 ? (
         products.map((prod) => {
-          return <Item product={prod} key={prod.key} />;
+          return <Item product={prod} key={prod.id} />;
         })
       ) : (
         <PulseLoader color="#6b49ff" />

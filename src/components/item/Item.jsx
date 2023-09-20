@@ -5,12 +5,12 @@ import {ItemCount} from '../itemCount/ItemCount';
 export const Item = ({product}) => {
 
     return(
-        <articicle className="product-card">
+        <article className="product-card">
             <img src={product.image} alt="Imagen producto" className="product-card__image" />
             <h3 className="product-card__title">{product.title}</h3>
             <span className="product-card__title">$ {product.price}</span>
             <ItemCount stock={10} initial={1}/>
-        </articicle>
+        </article>
     );
 
 };
