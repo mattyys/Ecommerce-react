@@ -1,0 +1,21 @@
+import {MdMenu} from "react-icons/md";
+import { CartWidget } from "../../components/cartWidget/CartWidget";
+import './NavBar.css';
+
+export const NavBar = () => {
+    const brand = 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211';
+
+    return(
+        <header className="navbar-container">
+            <div className="menu-icon">
+                <MdMenu size={25} />
+                <span>Menu</span>
+            </div>
+
+            <img src={brand} alt="Logo navbar" />
+
+            <CartWidget />
+        </header>
+
+    );
+};

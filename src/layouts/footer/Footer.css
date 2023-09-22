@@ -1,0 +1,15 @@
+.footer-container{
+    
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+h5, a{
+    color: var(--just-white);
+    letter-spacing: 1px;
+    font-family:var(--mulish-font);
+    
+  
+}
