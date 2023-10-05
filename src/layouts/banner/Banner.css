@@ -1,0 +1,66 @@
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.banner__img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%) blur(1px);
+}
+
+
+.banner__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: baseline;
+    margin-bottom: 10rem;
+   /* justify-self: baseline;
+    margin-top: 150px;
+    margin-right: 152px;*/
+
+}
+.banner__info h1 {
+    width: 25rem;
+    height: 7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: var(--just-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner__info-btn {
+    background-color: transparent;
+    color: var(--just-white);
+    text-decoration: none;
+    width: 175px;
+    height: 58px;
+    border: 5px solid var(--just-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 22px;
+}
+.banner__info-btn:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 250ms ease-in-out;
+}
+.banner__info-btn:active{
+    transform: scale(0.98);
+    transition: all 250ms ease-in-out;
+}
