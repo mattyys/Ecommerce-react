@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { MdMenu } from "react-icons/md";
+import { MdArrowDropDown, MdMenu } from "react-icons/md";
 import { CartWidget } from "../../components/cartWidget/CartWidget";
 import "./NavBar.css";
 
@@ -18,6 +18,7 @@ export const NavBar = () => {
 
       <div className="menu-icon">
         <MdMenu size={25} />
+        <MdArrowDropDown size={24} />
         <span>Menu</span>
       </div>
 

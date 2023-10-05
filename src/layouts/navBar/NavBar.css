@@ -1,9 +1,9 @@
 .navbar-container{
     padding: 12px 20px;
     display:grid;
-    grid-template: 1fr / 1rf 1fr 1fr;
+    grid-template: 1rf / 1rf 1fr 1fr;
     gap: 30px;
-    align-items: center;
+    align-items:center;
 }
 
 .menu-icon{
