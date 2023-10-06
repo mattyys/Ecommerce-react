@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import PulseLoader from "react-spinners/PulseLoader";
 
-export const ItemContainer = () => {
+export const ItemContainer = ({category}) => {
   //Se define estados para recuperar datos del API
   const [products, setProducts] = useState([]);
 
@@ -22,12 +22,26 @@ export const ItemContainer = () => {
       console.log(error);
     }
   };
+  const getProductByCategory = async () =>{
+      try{
+        const response = await fetch(`${Constantes.allProducts}`);
+        const data = await response.json();
+        const filteredProducts = data.filter((prod)=>prod.category.toLowerCase() === category);
+        setProducts(filteredProducts);
+      }catch(err){
+        console.error(err);
+      }
+  };
 
   //Se utiliza useEffect par cargar datos al montar el componente
 
   useEffect(() => {
-    getProducts();
-  },[]);
+  if(category){
+    getProductByCategory();
+  }else{
+         getProducts();
+  }
+  },[category]);
 
   return (
     <div className="products-container">
