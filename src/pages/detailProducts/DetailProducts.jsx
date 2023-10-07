@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Constantes } from "../../assets/constantes";
+import PulseLoader from "react-spinners/PulseLoader";
 
 
 
@@ -30,10 +31,20 @@ export const DetailProducts = () =>{
 
     return (
         <main>
-            <h2>Derrtail Product</h2>
+            <h2>DetailProduct</h2>
 
             <section>
-
+                {
+                    product 
+                    ?
+                    <div>
+                        <img src={product.image} alt="imagen producto" />
+                        <h3>{product.title}</h3>
+                        <p>{product.description}</p>
+                        <p>{product.porice}</p>
+                    </div>
+                    : <PulseLoader color="#6b49ff" />
+                }
             </section>
         </main>
 
