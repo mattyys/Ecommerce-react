@@ -38,3 +38,6 @@
     height: 100%;
     object-fit: contain;
 }
+h3{
+    color: var(--just-black);
+}

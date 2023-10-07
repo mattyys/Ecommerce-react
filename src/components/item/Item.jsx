@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./Item.css";
 import { ItemCount } from "../itemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 export const Item = ({ product }) => {
   return (
@@ -11,7 +12,9 @@ export const Item = ({ product }) => {
         className="product-card__image"
       />
       <div className="product-card__info-container">
+        <Link to={`/detail/${product.id}`}>
         <h3 className="product-card__info-container__title">{product.title}</h3>
+</Link>
         <span className="product-card__info-container__title">$ {product.price}</span>
         <ItemCount stock={10} initial={1} className="product-card__info-container__count" />
       </div>
