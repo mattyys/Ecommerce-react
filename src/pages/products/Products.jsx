@@ -9,7 +9,7 @@ export const Products = () => {
   return (
     
     <main>
-        <h2>Product</h2>
+        <h2>{ category ? `Products / ${category}` : 'All Products'}</h2>
         <ItemContainer  category={category}/>
     </main>
   )

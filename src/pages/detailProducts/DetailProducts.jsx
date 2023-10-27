@@ -38,7 +38,7 @@ export const DetailProducts = () =>{
                     product 
                     ?
                     <div>
-                        <img src={product.image} alt="imagen producto" />
+                        <img src={product.image} alt={product.title}/>
                         <h3>{product.title}</h3>
                         <p>{product.description}</p>
                         <p>{product.porice}</p>

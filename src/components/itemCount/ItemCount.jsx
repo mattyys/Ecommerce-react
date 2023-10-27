@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import './ItemCount.css';
+import { useState } from "react";
+import PropTypes from "prop-types";
+import "./ItemCount.css";
+import { Button } from "../Button/Button";
 
 export const ItemCount = ({ stock, initial }) => {
-
   const [count, setCount] = useState(initial);
 
   const addCount = (num) => {
@@ -11,31 +11,32 @@ export const ItemCount = ({ stock, initial }) => {
   };
 
   return (
-    <div className="count-container">
-      <button
-        disabled={count <= 1}
-        className="button-count"
-        onClick={() => {
-          addCount(-1);
-        }}
-      >
-        -
-      </button>
-      <div className="box-quantity">{count}</div>
-      <button
-        className="button-count"
-        disabled={count >= stock}
-        onClick={() => {
-          addCount(1);
-        }}
-      >
-        +
-      </button>
+    <div>
+      <div className="count-container">
+        <button
+          disabled={count <= 1}
+          className="button-count"
+          onClick={() => {
+            addCount(-1);
+          }}
+        >
+          -
+        </button>
+        <div className="box-quantity">{count}</div>
+        <button
+          className="button-count"
+          disabled={count >= stock}
+          onClick={() => {
+            addCount(1);
+          }}
+        >
+          +
+        </button>
+      </div>
+      <Button title="Agregarr" handleClick={() =>{onAdd(count)}}></Button>
     </div>
   );
 };
-
-
 
 ItemCount.protoTypes = {
   stock: PropTypes.number.isRequired,
