@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./ItemCount.css";
 import { Button } from "../Button/Button";
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const addCount = (num) => {

@@ -4,6 +4,8 @@ import { CartWidget } from "../../components/cartWidget/CartWidget";
 import "./NavBar.css";
 import { useState } from "react";
 import { Constantes } from "../../assets/constantes";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export const NavBar = () => {
   const brand =
@@ -17,6 +19,7 @@ export const NavBar = () => {
 
   const {categories} = Constantes;
 
+const {total} = useContext(CartContext);
 
   return (
 
@@ -49,6 +52,8 @@ export const NavBar = () => {
       </div>
 
       <img src={brand} alt="Logo navbar" />
+
+      <span > ${total} </span>
 
       <div className="cart-widget-container">
         <CartWidget />

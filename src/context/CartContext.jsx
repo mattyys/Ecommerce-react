@@ -22,6 +22,10 @@ const CartProvider = ({children}) =>{
         const totalItems = cart.reduce( (accumulator, value) => accumulator + value.qty,0);
 
         setTotalItems(totalItems);
+        //funciona pero mantiene el ultimo valor verr de hacer lista de carrito para el total de el carrito
+        const totalcurr = cart.reduce( (accumulator, value) => accumulator + value.price,0);
+        setTotal(totalcurr);
+        
 
     };
 
