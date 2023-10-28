@@ -1,0 +1,16 @@
+.product-detail-container__detail{
+    display: flex;
+    justify-content: center;
+}
+
+.product-detail-container__detail img{
+    width: 24.375rem;
+    height: 32.812rem;
+    flex-shrink: 0;
+}
+.product-detail-container__detail__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}

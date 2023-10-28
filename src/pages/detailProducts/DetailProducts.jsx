@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import { Constantes } from "../../assets/constantes";
 import PulseLoader from "react-spinners/PulseLoader";
 
+import './DetailProducts.css'
+
 
 
 export const DetailProducts = () =>{
 
     //1.obtener el paramatro id de la url
-    const {id} = useParams(); //id es el nombre del parametro que definimos en app.jsx
+    const {id, category} = useParams(); //id es el nombre del parametro que definimos en app.jsx
 
     //2. obtener el producto de la API (En lugar de filtrar usaremos el metodo find)
     const [product, setProduct] = useState(null);//guardamos el producto en un estado
@@ -31,17 +33,28 @@ export const DetailProducts = () =>{
 
     return (
         <main>
+            
             <h2>DetailProduct</h2>
 
             <section>
                 {
                     product 
                     ?
-                    <div>
+                    <div className="product-detail-container">
+                        <div className="product-detail-container__detail">
                         <img src={product.image} alt={product.title}/>
-                        <h3>{product.title}</h3>
-                        <p>{product.description}</p>
-                        <p>{product.porice}</p>
+                            <div className="product-detail-container__detail__info">
+
+                                <h2>{ id ? `Products / ${product.category} / ${product.title}` : 'Product'}</h2>                      
+                                <p>$ {product.price}</p>
+                            </div>
+
+                        </div>
+
+                            <h4>desciption</h4>
+                            <p>{product.description}</p>
+
+
                     </div>
                     : <PulseLoader color="#6b49ff" />
                 }
