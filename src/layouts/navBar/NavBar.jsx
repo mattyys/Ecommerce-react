@@ -4,8 +4,6 @@ import { CartWidget } from "../../components/cartWidget/CartWidget";
 import "./NavBar.css";
 import { useState } from "react";
 import { Constantes } from "../../assets/constantes";
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
 
 export const NavBar = () => {
   const brand =
@@ -17,9 +15,11 @@ export const NavBar = () => {
       setShowCategories(!showCategories);
   };
 
+  
+
   const {categories} = Constantes;
 
-const {total} = useContext(CartContext);
+
 
   return (
 
@@ -50,13 +50,14 @@ const {total} = useContext(CartContext);
         <MdMenu size={25} />
         <span>Menu</span>
       </div>
+      <NavLink to="/" >
+        <img src={brand} alt="Logo navbar" />
+      </NavLink>
 
-      <img src={brand} alt="Logo navbar" />
-
-      <span > ${total} </span>
+  
 
       <div className="cart-widget-container">
-        <CartWidget />
+        <CartWidget  /> 
       </div>
     </header>
   );

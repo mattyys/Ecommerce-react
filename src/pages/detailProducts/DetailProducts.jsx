@@ -19,8 +19,7 @@ export const DetailProducts = () =>{
         try{
             const response = await fetch(Constantes.allProducts);
             const data = await response.json();//data es un array de productos
-
-            const result = data.find( (prod)=> prod.id ===  Number(id) );//con 2 iguales es comparacion no estricta
+            const result = data.find( (prod)=> prod.id ===  Number(id) );
             setProduct(result);
         }catch(error){
             console.error(error);

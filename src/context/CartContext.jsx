@@ -20,12 +20,12 @@ const CartProvider = ({children}) =>{
 
         //agerga total de items en el carrito
         const totalItems = cart.reduce( (accumulator, value) => accumulator + value.qty,0);
-
         setTotalItems(totalItems);
 
-        //se corrige la suma de los valores y se agrega la cantidad pendiente de hacer listado de carrito
+        //agrega la suma total price del carrito
         const totalcurr = cart.reduce( (accumulator, value) => accumulator + (value.price * value.qty),0);
         setTotal(totalcurr);
+        localStorage.setItem('cart',JSON.stringify(cart));//se almacena el carrito en locastorage con el nombe cart
         
 
     };
@@ -39,7 +39,7 @@ const CartProvider = ({children}) =>{
 
                 if(prod.id === product.id){
                 //si el producto existe se actualiza la cantidad
-                    return{...prod,//con el operador spread se compia las propiedades del producto
+                    return{...prod,//con el operador spread se copia las propiedades del producto
                         qty: prod.qty + qty};//actualizamos la cantidad
                 }
                 return prod;//si no es el producto se devuelve sin modificar
@@ -51,13 +51,28 @@ const CartProvider = ({children}) =>{
 
     };
 
+    const deleteProductById = (id) => {//con el mtodo filtre se crea un nuevo carrrito sacando el seleccionado.
+        const newCart = cart.filter(prod => prod.id != id);
+        setCart(newCart);
+        localStorage.setItem('cart', JSON.stringify(newCart));//se pasa el carrito nuevo al localstorage
+    };
+
     const deleteCart = () =>{//funcion para eliminar carrito, se lo setea en vacio
         setCart([]);
     };
 
     useEffect(() =>{
         calcularTotalItems();
+        
     }, [cart]);
+
+    useEffect(() =>{
+        const localCart = JSON.parse(localStorage.getItem('cart'));
+        if(localCart){
+            setCart(localCart);
+        }
+
+    }, []);
 
     //se retorna el componente contextProvider con el contexto y el children
     return(
@@ -66,6 +81,7 @@ const CartProvider = ({children}) =>{
             cart,
             addProduct,
             deleteCart,
+            deleteProductById,
             totalItems,
             total,
         }}>

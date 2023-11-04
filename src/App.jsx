@@ -7,6 +7,7 @@ import { Products } from "./pages/products/Products";
 import { Home } from "./pages/home/Home";
 import { DetailProducts } from "./pages/detailProducts/DetailProducts";
 
+
 function App() {
   return (
     <CartProvider>
