@@ -51,7 +51,7 @@ const CartProvider = ({children}) =>{
 
     };
 
-    const deleteProductById = (id) => {//con el mtodo filtre se crea un nuevo carrrito sacando el seleccionado.
+    const deleteProdById = (id) => {//con el mtodo filtre se crea un nuevo carrrito sacando el seleccionado.
         const newCart = cart.filter(prod => prod.id != id);
         setCart(newCart);
         localStorage.setItem('cart', JSON.stringify(newCart));//se pasa el carrito nuevo al localstorage
@@ -81,7 +81,7 @@ const CartProvider = ({children}) =>{
             cart,
             addProduct,
             deleteCart,
-            deleteProductById,
+            deleteProdById,
             totalItems,
             total,
         }}>

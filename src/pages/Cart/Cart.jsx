@@ -4,7 +4,7 @@ import { CartContainer } from "../../components/CartContainer/CartContainer";
 import "./Cart.css";
 
 export const Cart = () => {
-  const { cart, totalItems, total, deleteProductById } =
+  const { cart, totalItems, total, deleteProdById } =
     useContext(CartContext);
 
   return (
@@ -13,7 +13,7 @@ export const Cart = () => {
         {cart.length === 0 ? (
           <p>No tienes productos en tu carito </p>
         ) : (
-          <CartContainer cart={cart} deleteProductById = {deleteProductById} />
+          <CartContainer cart={cart} deleteProdById = {deleteProdById} />
         )}
       </div>
       <div>

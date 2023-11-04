@@ -6,6 +6,7 @@ import { NavBar } from "./layouts/navBar/NavBar";
 import { Products } from "./pages/products/Products";
 import { Home } from "./pages/home/Home";
 import { DetailProducts } from "./pages/detailProducts/DetailProducts";
+import { Cart } from "./pages/Cart/Cart";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           </Route>
 
           <Route path="/detail/:id" element={<DetailProducts />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
 
         <Footer />
