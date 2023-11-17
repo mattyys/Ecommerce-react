@@ -33,7 +33,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </div>
-      <Button title="Agregarr" handleClick={() =>{onAdd(count)}}></Button>
+      <Button title="Agregar" handleClick={() =>{onAdd(count)}}/>
     </div>
   );
 };
