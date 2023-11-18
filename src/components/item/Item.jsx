@@ -33,7 +33,7 @@ export const Item = ({ product }) => {
           $ {product.price}
         </span>
         <ItemCount
-          stock={10}
+          stock={product.stock}
           initial={1}
           className="product-card__info-container__count"
           onAdd={onAdd}
@@ -46,7 +46,7 @@ export default Item;
 
 Item.protoType = {
   product: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
