@@ -2,6 +2,7 @@ import "./ItemContainer.css";
 import {Item} from "../item/Item";
 import { Constantes } from "../../assets/constantes";
 import { useEffect, useState } from "react";
+import { getItems } from "../../Utils/firestore";
 
 import PulseLoader from "react-spinners/PulseLoader";
 
@@ -12,10 +13,10 @@ export const ItemContainer = ({category}) => {
   //Funcion para obtener y guardar los datos que me devuelve el API
   const getProducts = async () => {
     try {
-      const response = await fetch(`${Constantes.allProducts}`);
-    
-      const data = await response.json();
+      //const response = await fetch(`${Constantes.allProducts}`);
+      //const data = await response.json();
       
+      const data = await getItems('products');
       setProducts(data);
 
     } catch (error) {
@@ -24,8 +25,10 @@ export const ItemContainer = ({category}) => {
   };
   const getProductByCategory = async () =>{
       try{
-        const response = await fetch(`${Constantes.allProducts}`);
-        const data = await response.json();
+        //const response = await fetch(`${Constantes.allProducts}`);
+        //const data = await response.json();
+
+        const data = await getItems('products');
         const filteredProducts = data.filter((prod)=>prod.category.toLowerCase() === category);
         setProducts(filteredProducts);
       }catch(err){
