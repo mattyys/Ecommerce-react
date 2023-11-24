@@ -9,7 +9,7 @@ import { CartContext } from "../../context/CartContext";
 export const Item = ({ product }) => {
 
   const {addProduct} = useContext(CartContext);
-
+  
   const onAdd = (qty) =>{
     addProduct(product, qty);
   };
@@ -21,7 +21,7 @@ export const Item = ({ product }) => {
       <img
         src={product.image}
         alt="Imagen producto"
-        className="product-card__image"
+        className="img-fluid"
       />
       <div className="product-card__info-container">
         <Link to={`/detail/${product.id}`}>
@@ -50,7 +50,7 @@ Item.protoType = {
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    //no tiene stock el producto ver de agregar al data
+    stock: PropTypes.number.isRequired
   }),
 };
 Item.defaultProps = {

@@ -3,21 +3,24 @@ import './CartItem.css';
 import { ItemCount } from "../itemCount/ItemCount";
 import { useState } from "react";
 //agregar context al carrito para modificar el on add y actualizar al carrito
-
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 export const CartItem = ({prod, deleteProdById})=>{
+   const {addProduct} = useContext(CartContext); 
    
     const onAdd = (qty) =>{
         onPrice(qty);
-        
+        addProduct(prod,qty);
       };
 
     const [ countPrice, setCountPrice] = useState(prod.price);
     const onPrice = (qty) => {
         const price = prod.price * qty;
         setCountPrice(price);
+        
     };
-
+    
    
 
 
@@ -28,7 +31,7 @@ export const CartItem = ({prod, deleteProdById})=>{
                 <td>{prod.title}</td>
                 <td>
                 <ItemCount
-                    stock={10}
+                    stock={prod.stock}
                     initial={prod.qty}
                     onAdd={onAdd}
                  />

@@ -1,6 +1,6 @@
 import "./ItemContainer.css";
 import {Item} from "../item/Item";
-import { Constantes } from "../../assets/constantes";
+//import { Constantes } from "../../assets/constantes";
 import { useEffect, useState } from "react";
 import { getItems } from "../../Utils/firestore";
 

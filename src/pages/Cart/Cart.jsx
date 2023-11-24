@@ -11,14 +11,14 @@ export const Cart = () => {
     <main>
       <div>
         {cart.length === 0 ? (
-          <p>No tienes productos en tu carito </p>
+          <p className="text-start fs-3">UPS!! No tienes productos en tu carrito </p>
         ) : (
           <CartContainer cart={cart} deleteProdById = {deleteProdById} />
         )}
       </div>
-      <div>
-        <p>Total items: {totalItems}</p>
-        <p>Total: $ {total}</p>
+      <div className="text-center">
+        <p className="fs-4">Total items: {totalItems}</p>
+        <p className="badge bg-success fs-4">Total: $ {total}</p>
       </div>
     </main>
   );
