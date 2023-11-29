@@ -7,7 +7,7 @@ import { Constantes } from "../../assets/constantes";
 
 export const NavBar = () => {
   const brand =
-    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211";
+  "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211";
 
   const [showCategories, setShowCategories] = useState(false);
   

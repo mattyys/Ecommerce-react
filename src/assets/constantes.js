@@ -8,5 +8,5 @@ export const Constantes = {
         womans:"women's clothing",
         electronic:"electronics",
         jewelery:"jewelery"
-        }
+        } 
 };

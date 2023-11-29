@@ -33,7 +33,11 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
           +
         </button>
       </div>
-      <Button title="Agregar" handleClick={() =>{onAdd(count)}}/>
+      <Button 
+        title="Agregar" 
+        handleClick={() =>{onAdd(count)}}
+        active={true}
+      />
     </div>
   );
 };
