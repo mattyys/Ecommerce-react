@@ -30,8 +30,7 @@ export const ItemContainer = ({category}) => {
         //const data = await response.json();
       
         const data = await getItems('products');
-        const filteredProducts = data.filter((prod)=>
-          prod.category.toLowerCase() === category);
+        const filteredProducts = data.filter((prod)=>prod.category.toLowerCase() === category);
         setProducts(filteredProducts);
       }catch(err){
         console.error(err);

@@ -1,7 +1,7 @@
 import db from "../Config/firebase.config";//se importa firestore(configuracion)
 
 
-import { addDoc, collection, query, getDocs, getDoc } from 'firebase/firestore/lite'; //se importan las funciones
+import { addDoc, collection, query, getDocs, doc, getDoc } from 'firebase/firestore/lite'; //se importan las funciones
 
 
 //CREATE DOCUMENT - se pasa el documento a crear y el nombre de la coleccion
@@ -27,6 +27,16 @@ export const getItems = async (nameCollection) => {
         console.error(error);
     };
 
+};
+
+export const getItemById = async (nameCollection, idProd) => {
+    try{
+        const docRef = doc(db, nameCollection, idProd);
+        const docSnap = await getDoc(docRef);
+        return docSnap.exists() ? docSnap.data() : null;       
+    }catch(error){
+        console.error(error);
+    };
 };
 
 
@@ -55,3 +65,8 @@ const getArrayCollection = ( collection ) => {
         return { ...doc.data(), id: doc.id };//retorna un objeto con el id mas toda la info del documento
     })
 };
+/*const getDocumentItem = (collection, idProd) => {
+    return collection.docs.find((doc) => {
+        doc.id == idProd ? {...doc.data(), id:doc.id} : null;
+    });
+};*/

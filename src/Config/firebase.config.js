@@ -6,12 +6,13 @@ import { listProducts } from "../assets/data2";
 
 // Se declara la configuracion de firebase en un objeto
 const firebaseConfig = {
-  apiKey: "AIzaSyBdau0l18BCByPHbZ_uNYX9uWpSwv0qw_o",
-  authDomain: "ecommerce-tienda-c23dd.firebaseapp.com",
-  projectId: "ecommerce-tienda-c23dd",
-  storageBucket: "ecommerce-tienda-c23dd.appspot.com",
-  messagingSenderId: "1208805380",
-  appId: "1:1208805380:web:69eb19fe2aa03423ca6d51"
+  apiKey: "AIzaSyCWYZCNinjyX7t8pv3nDwXbjnVi8tODC8E",
+  authDomain: "myfirst-ecommerce-react.firebaseapp.com",
+  projectId: "myfirst-ecommerce-react",
+  storageBucket: "myfirst-ecommerce-react.appspot.com",
+  messagingSenderId: "336362941139",
+  appId: "1:336362941139:web:0a359c38c02a90b4548226",
+  measurementId: "G-744KFK24LC"
 };
 
 // Initialize Firebase con la configuracion

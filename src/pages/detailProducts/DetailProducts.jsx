@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Constantes } from "../../assets/constantes";
 import PulseLoader from "react-spinners/PulseLoader";
-
-import './DetailProducts.css'
+import './DetailProducts.css';
+import { getItemById } from "../../Utils/firestore";
 
 
 
@@ -19,9 +18,10 @@ export const DetailProducts = () =>{
 
     const getProductById = async (id) => {
       try{
-          const arrayResult = await getItems(nameCollection);
-          const product = arrayResult.filter( (pord) => pord.id === Number(id) );
-          setProduct(product);
+          const prod = await getItemById(nameCollection, id);
+          console.log(prod);
+          //const prod = arrayResult.find( (pord) => {pord.id === id } );
+          setProduct(prod);
 
       } catch(error){
         console.log(error);
@@ -47,8 +47,8 @@ export const DetailProducts = () =>{
                         <img src={product.image} alt={product.title}/>
                             <div className="product-detail-container__detail__info">
 
-                                <h2>{ id ? `Products / ${category} / ${product.title}` : 'Product'}</h2>                      
-                                <p>$ {product.price}</p>
+                                <h2>{ id ? `Products / ${product.category} / ${product.title}` : 'Product'}</h2>                      
+                                <p> Price $ {product.price}</p>
                             </div>
 
                         </div>
