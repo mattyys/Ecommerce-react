@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { CartContainer } from "../../components/CartContainer/CartContainer";
 import "./Cart.css";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { cart, totalItems, total, deleteProdById } =
@@ -20,6 +21,10 @@ export const Cart = () => {
         <p className="fs-4">Total items: {totalItems}</p>
         <p className="badge bg-success fs-4">Total: $ {total}</p>
       </div>
+      <Link to={"/payment"}>
+        <button className="btn btn-primary ">Pagar</button>
+      </Link>
+      
     </main>
   );
 };

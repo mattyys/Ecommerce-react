@@ -29,6 +29,7 @@ export const getItems = async (nameCollection) => {
 
 };
 
+//obtiene el documento pasando el id del producto
 export const getItemById = async (nameCollection, idProd) => {
     try{
         const docRef = doc(db, nameCollection, idProd);

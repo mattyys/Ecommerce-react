@@ -1,0 +1,19 @@
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    flex-direction: column;
+}
+form{
+    width: 500px;
+}
+
+
+
+@media screen and (max-width: 800px){
+    form{
+        width: 400px;
+    }
+   
+}
