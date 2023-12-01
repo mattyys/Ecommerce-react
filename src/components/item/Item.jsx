@@ -21,7 +21,7 @@ export const Item = ({ product }) => {
       <img
         src={product.image}
         alt="Imagen producto"
-        className="img-fluid"
+        
       />
       <div className="product-card__info-container">
         <Link to={`/detail/${product.id}`}>

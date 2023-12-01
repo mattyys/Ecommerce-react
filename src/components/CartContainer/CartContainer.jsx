@@ -11,6 +11,7 @@ export const CartContainer = ({ cart, deleteProdById }) => {
               <th>Detalle</th>
               <th>Cantidad</th>
               <th>Precio</th>
+              <th>Total</th>
               <th>Eliminar</th>
             </tr>
           </thead>

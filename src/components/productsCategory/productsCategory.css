@@ -11,8 +11,8 @@
     flex-direction: column;
     justify-content: center;
     margin: 0.2rem;
-    width: 295px;
-    min-height: 412px;
+    width: 250px;
+    min-height: 380px;
     height: fit-content;
     border: 1px solid var( --info-color);
     border-radius: 4px;

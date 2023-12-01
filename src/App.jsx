@@ -8,6 +8,7 @@ import { Home } from "./pages/home/Home";
 import { DetailProducts } from "./pages/detailProducts/DetailProducts";
 import { Cart } from "./pages/Cart/Cart";
 import { PaymentForm } from "./pages/PaymentForm/PaymentForm";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           
           <Route path="/payment" element= {<PaymentForm />} />
+          <Route path="/aboutus" element={<AboutUs />} />
          
           
 

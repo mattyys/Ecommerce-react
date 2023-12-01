@@ -10,14 +10,14 @@
 .product-card:hover {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
 }
-.product-card__image {
-    width: auto;
-    height: 329px;
+.product-card {
+    width: 20rem;
+    height: 22rem;
     overflow: hidden;
 }
-.product-card__image img{
-    width: auto;
-    height: auto;
+.product-card img{
+    width:50%;
+    height:50%;
     object-fit: contain;
 }
 h3 {
@@ -38,4 +38,5 @@ span {
 .product-card__info-container{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }

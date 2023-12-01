@@ -34,29 +34,23 @@ export const DetailProducts = () =>{
     }),[id];
 
     return (
-        <main>
-            
-            <h2>DetailProduct</h2>
-
-            <section>
+        <main className="container">
+                         
+            <section className="product-container">
                 {
                     product 
                     ?
                     <div className="product-detail-container">
+                        <h2>{ id ? `Products / ${product.category} / ${product.title}` : 'Product'}</h2>
                         <div className="product-detail-container__detail">
-                        <img src={product.image} alt={product.title}/>
-                            <div className="product-detail-container__detail__info">
-
-                                <h2>{ id ? `Products / ${product.category} / ${product.title}` : 'Product'}</h2>                      
-                                <p> Price $ {product.price}</p>
+                            <img className="mx-auto d-block" src={product.image} alt={product.title}/>
+                            <div className="product-detail-container__detail__info">                   
+                                <p className="badge bg-success fs-5"> Price $ {product.price}</p>
                             </div>
-
                         </div>
 
-                            <h4>desciption</h4>
-                            <p>{product.description}</p>
-
-
+                        <h4 className="description">Descripcion</h4>
+                        <p className="description-text">{product.description}</p>
                     </div>
                     : <PulseLoader color="#6b49ff" />
                 }

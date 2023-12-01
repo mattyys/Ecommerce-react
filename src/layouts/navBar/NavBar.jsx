@@ -10,6 +10,8 @@ export const NavBar = () => {
   "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211";
 
   const [showCategories, setShowCategories] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);
   
   const handleCategories = () => {
       setShowCategories(!showCategories);
@@ -25,15 +27,15 @@ export const NavBar = () => {
 
     <header className="navbar-container">
 
-      <nav className="navbar-container__nav">
+      <nav className={menuOpen ? "navbar-container__nav-min" : "navbar-container__nav"}>
         <NavLink to="/">Inicio</NavLink>
 
-        <div className="links-group">
+        <div className={menuOpen ? "links-group-min" : "links-group"}>
             <NavLink to="/products">Productos</NavLink>
             <MdArrowDropDown size={24} onClick={handleCategories}/>
             {
               showCategories && (
-                <div className="links-group__menu">
+                <div className={menuOpen ? "links-group__menu-min min":"links-group__menu"}>
                   <NavLink to={`/products/${categories.mens}`} onClick={handleCategories}>{categories.mens}</NavLink>
                   <NavLink to={`/products/${categories.womans}`} onClick={handleCategories}>{categories.womans}</NavLink>
                   <NavLink to={`/products/${categories.jewelery}`} onClick={handleCategories}>{categories.jewelery}</NavLink>
@@ -43,12 +45,13 @@ export const NavBar = () => {
             }
         </div>
 
-        <a>Quienes somos</a>
+        <NavLink to={'/aboutus'}>Quienes somos</NavLink>
       </nav>
 
-      <div className="menu-icon">
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         <MdMenu size={25} />
         <span>Menu</span>
+
       </div>
       <NavLink to="/" >
         <img src={brand} alt="Logo navbar" />

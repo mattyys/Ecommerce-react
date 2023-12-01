@@ -1,16 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
 .product-detail-container__detail{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
-
 .product-detail-container__detail img{
-    width: 24.375rem;
-    height: 32.812rem;
-    flex-shrink: 0;
-}
-.product-detail-container__detail__info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    height: 20rem;
+    width: 20rem;
 }

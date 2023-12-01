@@ -1,13 +1,13 @@
-.footer-container{
-    
+.footer-container{ 
     padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--just-white);
+    box-shadow: 2px -4px 19px -2px rgba(0,0,0,0.52) inset;
 }
 h5, a{
-    color: var(--just-white);
+    color: var(--just-black);
     letter-spacing: 1px;
     font-family:var(--mulish-font);
     
