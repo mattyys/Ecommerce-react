@@ -1,8 +1,10 @@
 # Ecommerce - React
 
+![1701471669373](image/README/1701471669373.png)
+
 ## Descripcion
 
-#### Es un ecommrce de una tienda online la cual va a incluir:
+#### Este proyecto es una tienda online ficticia la cual va a incluir:
 
 - Categoria de productos.
 - Carrito de compra.
@@ -10,7 +12,7 @@
 - Vista por categoria.
 - NavBar.
 - Footer.
-- Apartado ContactUs.
+- Apartado Quienes somos.
 
 ## Tecnologias
 
