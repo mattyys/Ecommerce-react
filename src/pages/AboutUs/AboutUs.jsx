@@ -7,7 +7,7 @@ export const AboutUs = () => {
       <section className="container__info">
         <h2>About Us</h2>
         <h4>Hola!</h4>
-        <img src="../../assets/images/matias.png" alt="imagen contacto" />
+        <img src="" />
         <p>
           Me llamo Matías Alves, soy estudiante de la carrera FullStack web
           Developer en IBEC. Este es un proyecto de ecommerce en el cual se
