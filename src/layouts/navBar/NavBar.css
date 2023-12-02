@@ -18,10 +18,9 @@
     align-items: center;
     gap: 3px;
 }
-img{
+.navbar-container img{
     width: 110px;
     height: 110px;
-    justify-self: center;
 }
 
 .navbar-container__nav{
@@ -40,6 +39,7 @@ img{
     justify-self: start;
     justify-content: center;
     align-items: start;
+    background-color: var(--body-bg-color-light);
 }
 .navbar-container__nav a, .navbar-container__nav-min a{
     text-decoration: none;
@@ -91,6 +91,10 @@ img{
     }
     .navbar-container__nav-min{
         display:none;
+    }
+    .navbar-container img{
+        
+        transform: translate(80%);
     }
 
 }

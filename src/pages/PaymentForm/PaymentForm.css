@@ -6,7 +6,8 @@
     flex-direction: column;
 }
 form{
-    width: 500px;
+    width: 27rem;
+    height: fit-content;
 }
 
 

@@ -12,7 +12,7 @@ export const CartWidget = () =>{
     
     return (
         <div onClick={ () => { navigate('/cart')}} className="cart-widget">
-            <MdShoppingCart size={25} />
+            <MdShoppingCart size={30} />
             <div className="cart-widget__count">
                 { totalItems }
             </div>

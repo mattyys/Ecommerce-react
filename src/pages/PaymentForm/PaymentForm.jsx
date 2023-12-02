@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
 import "./PaymentForm.css";
 import { CartContext } from "../../context/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { createDocument } from "../../Utils/firestore";
 import { Link, useNavigate } from "react-router-dom";
+import { ModalConfirm } from "../../components/ModalConfirm/ModalConfirm";
 
 
 export const PaymentForm = () => {
@@ -11,8 +12,13 @@ export const PaymentForm = () => {
   const onDate = new Date().toISOString().substring(0, 10);
 
   const { cart, deleteCart } = useContext(CartContext);
+
+  const [openModal, setOpenModal] = useState(false);
+
   const invoiceCollection = 'invoices';
+
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -28,8 +34,7 @@ export const PaymentForm = () => {
     const invoiceData = {...dataForm, cart};
     createDocument(invoiceData, invoiceCollection);
     deleteCart();
-    alert("Pago realizado correctamente");
-    navigate("/");
+    
     
   };
 
@@ -122,14 +127,14 @@ export const PaymentForm = () => {
           <div className="">
             <Link to="/cart">
 
-            <button className="btn btn-danger m-3">Cancelar</button>
+              <button className="btn btn-danger m-3">Cancelar</button>
             </Link>
 
-            <input className="btn btn-primary " type="submit" value="Pagar" />
-           
+            <input className="btn btn-primary" onClick={() => setOpenModal(true) } type="submit" value="Pagar" />
+                       
           </div>
         </form>
-
+        { openModal && <ModalConfirm closeModal={setOpenModal}/>}
       </div>
     </main>
   );
