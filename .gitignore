@@ -25,3 +25,4 @@ dist-ssr
 
 #firebase
 /src/Config/firebase.config.js
+.vercel
