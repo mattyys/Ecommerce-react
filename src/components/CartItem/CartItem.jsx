@@ -18,7 +18,7 @@ export const CartItem = ({prod, deleteProdById})=>{
     return (
         <>
             <tr>
-                <td><img src={prod.image} className="img-fluid" alt="Imagen de producto" /></td>
+                <td><img src={prod.image} className="img-prod" alt="Imagen de producto" /></td>
                 <td>{prod.title}</td>
                 <td>{prod.qty}</td>
                 <td>{prod.price}</td>

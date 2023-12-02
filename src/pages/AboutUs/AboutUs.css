@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+
+}
+
+.card-contact{
+    width: 18rem;
+}
+.container__info{
+    z-index: -1;
+}
+
+a{
+ text-decoration: none;
+ text-align: center;
+ 
+}

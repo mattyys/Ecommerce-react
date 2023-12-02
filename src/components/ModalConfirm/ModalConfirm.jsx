@@ -1,7 +1,7 @@
 import './ModalConfirm.css'
 import { useNavigate } from 'react-router-dom';
 
-export const ModalConfirm = ({ closeModal }) => {
+export const ModalConfirm = ({ onCloseModal }) => {
     const navigate = useNavigate();
 
     const onNavigate = () => {
@@ -21,7 +21,7 @@ export const ModalConfirm = ({ closeModal }) => {
                 <div className="buttons-container">
                     <button 
                         onClick={ () => {
-                            closeModal(false)
+                            onCloseModal(false)
                             onNavigate()
                             }}
                     >Continuar</button>

@@ -2,12 +2,19 @@ button{
     cursor: pointer;
 }
 
-.product-line-container{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    
+
+.img-prod{
+    width: 4.5rem;
+    height: 6rem;
+}
+
+@media screen and (max-width: 480px){
+    .img-prod{
+        display: none;
+    }
+    tr{
+        display: flex;
+        flex-wrap: no-wrap;
+    }
+
 }

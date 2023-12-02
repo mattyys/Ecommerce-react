@@ -3,7 +3,7 @@ import "./PaymentForm.css";
 import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
 import { createDocument } from "../../Utils/firestore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ModalConfirm } from "../../components/ModalConfirm/ModalConfirm";
 
 
@@ -17,8 +17,7 @@ export const PaymentForm = () => {
 
   const invoiceCollection = 'invoices';
 
-  const navigate = useNavigate();
-
+  
   const {
     register,
     handleSubmit,
@@ -130,11 +129,11 @@ export const PaymentForm = () => {
               <button className="btn btn-danger m-3">Cancelar</button>
             </Link>
 
-            <input className="btn btn-primary" onClick={() => setOpenModal(true) } type="submit" value="Pagar" />
+            <input className="btn btn-primary m-3" onClick={() => setOpenModal(true) } type="submit" value="Pagar" />
                        
           </div>
         </form>
-        { openModal && <ModalConfirm closeModal={setOpenModal}/>}
+        { openModal && <ModalConfirm onCloseModal={setOpenModal}/>}
       </div>
     </main>
   );
