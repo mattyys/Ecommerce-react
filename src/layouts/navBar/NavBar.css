@@ -77,7 +77,7 @@
 }
 
 
-.links-group__menu:active{
+.links-group__menu:active, .links-group__menu-min:active{
     transition: all 250ms ease-in-out;
 }
 

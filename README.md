@@ -1,8 +1,8 @@
 # Ecommerce - React
 
-![1701471669373](image/README/1701471669373.png)
+![1701626613405](image/README/1701626613405.png)
 
-## Descripcion del Proyecto
+## escripcion del Proyecto
 
 Es una tienda ficticia que surge del proyecto final del curso de React JS de el Instituto [IBEC](https://ibec.edu.uy/), las clases fueron dadas por el profe [Josué Oroya](https://github.com/joshuacba08) que junto a mis compañeros ([Manu](https://github.com/ManuelRivas1991) y [Hugo](https://github.com/slotito))del curso dieron apoyo e ideas para la realizacion del mismo.
 
