@@ -33,7 +33,7 @@ Ya estas listo para probar el proyecto, a continuacion te hago un resumen de mi 
 
 A medida que iban pasando las clases y se iba profundizando en los conceptos de React JS como los componentes (inteligentes y presentacionales), hooks(useState, useEffect, useContext, etc), librerías de enrutamiento como React Route y librerías externas(React Icons, React Loader, etc), el manejo de eventos(onClick, onChange, onSubmit, etc.), el manejo de props, tareas asíncronas (fetch) y también la distribución de los componentes de la aplicación fui armando el proyecto. Es un proceso que empezó el primer día de clase y fuí aplicándo clase a clase todo lo aprendido.
 
-También incorporamos el uso de [Firebase](https://firebase.google.com/?hl=es) con Firestore para ppoder tener una base de datos en la nube, este proyecto trabaja con la base de datos en Firestore.
+También incorporamos el uso de [Firebase](https://firebase.google.com/?hl=es) con Firestore para poder tener una base de datos en la nube, este proyecto trabaja con la base de datos en Firestore.
 
 #### Algunas dificultades
 
